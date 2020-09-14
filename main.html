@@ -1,105 +1,329 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Covid19</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <script src="https://kit.fontawesome.com/0fa0858ad1.js" ></script>
+  <title></title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <style type="text/css">
+    
+    #top1{
+      background-image: url('https://woodlands-psychiatrist.com/wp-content/uploads/2020/03/coronavirus.jpg');
+     
+      background-color:rgb(31, 37, 116);
+      text-align: center;
+      color: white;
+      
+    }
+    .panel{
+         background-color: grey;
+    }
+    .back{
+          text-align: center;
+          padding:20px;
+          border-radius: 20px;
+         
+          color:#d1c5cd;
+          font-size: 15px;
+    }
+
+body{
+   font-family: Roboto,sans-serif;
+  
+}
+.card{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+}
+
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card h3{
+  font-weight: 600;
+}
+
+.card img{
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  max-height: 120px;
+}
+
+.card-1{
+  width: 40rem;
+  height:30rem;
+  background-image: url('https://i.pinimg.com/originals/aa/43/50/aa4350ce5aed12fc4b0518f0dead4e1e.png');
+      background-repeat: no-repeat;
+    background-position: right;
+   
+
+}
+
+.card-2{
+  width: 40rem;
+  height:30rem;
+   background-image: url('https://i.pinimg.com/originals/aa/43/50/aa4350ce5aed12fc4b0518f0dead4e1e.png');
+      background-repeat: no-repeat;
+    background-position: right;
+    text-align: center;
+
+
+    
+}
+
+.card-3{
+  width: 40rem;
+  height:30rem;
+   background-image: url('https://i.pinimg.com/originals/aa/43/50/aa4350ce5aed12fc4b0518f0dead4e1e.png');
+      background-repeat: no-repeat;
+    background-position: right;
+    
+}
+
+.card-4{
+  width: 40rem;
+  height:30rem;
+   background-image: url('https://i.pinimg.com/originals/aa/43/50/aa4350ce5aed12fc4b0518f0dead4e1e.png');
+      background-repeat: no-repeat;
+    background-position: right;
+}
+
+@media(max-width: 990px){
+  .card{
+    margin: 20px;
+  }
+} 
+
+
+
+    
+.header{
+    
+    color: #FFF;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -msn-background-size: cover;
+}
+.header .overlay{
+  
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+
+.header .navbar-default {
+  background-color:transparent !important;
+  border-color:transparent;
+  background-image:none;
+  box-shadow:none;  
+}
+.header .navbar-default .navbar-brand{
+    font-size: 30px;
+    font-weight: bold;
+    color: #d1c5cd;
+}
+
+.header .navbar-default .navbar-nav>li>a {
+   font-size:20px; 
+   color:#d1c5cd; 
+    border-bottom: 1px solid transparent
+}
+.header .navbar-default .navbar-nav>li:hover a{
+    color: gray;
+     border-bottom: 2px solid gray;
+}
+
+
+.header .navbar-toggle {
+      margin:10px 0; 
+      background:#36C; 
+      color:#FFF;
+}
+.bg-text {
+  margin-top:12rem; 
+  margin-bottom: 14srem;
+  margin-left: 12rem;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4);
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  width: 80%;
+}
+  </style>
 </head>
 <body>
-    <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-2 col-md-2 col-xs-2 col-lg-2">
-        </div>
-        <div class="col-sm-8 col-md-8 col-xs-8 col-lg-8">
-      <br>
-      <br>
-      <br>
 
-        
-        <br>
-        <div class="shadow p-3 mb-5 bg-white rounded">
-            <br>
-            <div class="row">
-                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                    <center>
-            <div class="card text-white bg-primary mb-4 card-hover" style="max-width: 23rem;">
-                <div class="card-header"><h5>Contact & Helpline</h5></div>
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button type="button" class="btn btn-success">Success</button>
-                </div>
-              </div>
-              <div class="card text-white bg-primary mb-4 card-hover" style="max-width: 23rem;">
-                <div class="card-header"><h5>Notifications & advisories</h5></div>
-                <div class="card-body">
-                  
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <button type="button" class="btn btn-success">Success</button>
-                </div>
-              </div>
-              </center>
-                </div>
-                <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                    <center>
-                    <div class="card text-white bg-primary mb-4 card-hover" style="max-width: 23rem;">
-                        <div class="card-header"><h5>Hospitals Dashboards</h5></div>
-                        <div class="card-body">
+  <section class="header">
+            <div class="overlay">
+              
+                <div class="row">
+                   <div class="navbar navbar-default">
+                     
+                      <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
                           
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <button type="button" class="btn btn-success">Success</button>
-                        </div>
-                      </div>
-                      <div class="card text-white bg-primary mb-4 card-hover" style="max-width: 23rem;">
-                        <div class="card-header"><h5>Daily Comparision</h5></div>
-                        <div class="card-body">
+                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                            <div class="navlogo col-lg-2">
+                                
+                            </div>
                           
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <button type="button" class="btn btn-success">Success</button>
                         </div>
+                        
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                          
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                
+                                      <ul class="nav navbar-nav nav-links">
+                                        <li><a href="one.html">Contact & Helpline</a></li>
+                                        <li><a href="notad.html">Notifications & Advisories</a></li>
+                                        <li><a href="hospital.html">Hospitals & Beds</a></li>
+                                        <li><a href="college.html">Colleges & Beds</a></li>
+                                        <li><a href="deceased.html">Deceased</a></li>
+                                      </ul>
+                                                             
+                                                    
+                            </div>
                       </div>
-                    </center>
-                        </div>
+                 </div>               
+                </div>                
             </div>
+            
+ <div class="panel ">
+    <div class="panel-heading" id="top1">
+      <br>
+        <br>
         
-      
+       <div class="container">
+                <div class="row">
+                  <div class="bg-text">
+                    <center>
+                 <h1>COVIND19 DAILY STATISTICS</h1>
+                </center>
+                </div>
+                </div>
+         </div>
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
+    <br>
+    <br>
+    <br>
+    <div class="panel-body">
+       
+ 
 
-    </div>
-      <div class="col-sm-2 col-md-2 col-xs-2 col-lg-2">
-    </div>
-      </div>
-    </div>
+           
+          <div class="container ">
+              <div class="row">
+
+                <div class="col-md-12" >
+                  <div class="col-md-6" align="center">
+                  <div class="card card-1">
+                    <br>
+                    <h3>Contact & Helpline Information</h3>
+                    <br>
+                    <br>
+                    <br>
+                      <a type="button" class="btn btn-success"  href="one.html">Click</a>
+                  </div>
+                </div>
+                   
+                <div class="col-md-6" align="center">
+                  <div class="card card-2">
+                    <br>
+                    <h3>Notifications & Advisories</h3>
+                    <br>
+                    <br>
+                    <br>
+                     <a type="button" class="btn btn-success"  href="notad.html">Click</a>
+                  </div>
+                </div>
+                 </div>
+
+               </div>
+                   <br> 
+                   <br> 
+                 <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-6" align="center">
+                  <div class="card card-3">
+                    <br>
+                    <h3>Hospitals Dashboards</h3>
+                    <br>
+                    <br>
+                    <br>
+                            <div class="dropdown">
+                                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Select
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="hospital.html">Hospital</a></li>
+                                  <li><a href="college.html">College</a></li>
+                                
+                                </ul>
+                              </div>
+                  </div>
+                </div>
+                   
+                <div class="col-md-6" align="center">
+                  <div class="card card-4">
+                    <br>
+                    <h3>Covind19 Deceased Statistics</h3>
+                    <br>
+                    <br>
+                    <br>
+                      <a type="button" class="btn btn-success"  href="one.html">Click</a>
+                  </div>
+                </div>
+                 </div>
+               </div>
+               <br>
+               <br>
+              </div>
+              
+            </div>
+
+             
+           </div>
+        
+           
+
+
+  
+      </section>
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    
-    
-    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
-    
-    <script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../../assets/extra-libs/sparkline/sparkline.js"></script>
-    
-    <script src="../../dist/js/waves.js"></script>
-    
-    <script src="../../dist/js/sidebarmenu.js"></script>
-    
-    <script src="../../dist/js/custom.min.js"></script>
-    
-    
-    <script src="../../assets/libs/flot/excanvas.js"></script>
-    <script src="../../assets/libs/flot/jquery.flot.js"></script>
-    <script src="../../assets/libs/flot/jquery.flot.pie.js"></script>
-    <script src="../../assets/libs/flot/jquery.flot.time.js"></script>
-    <script src="../../assets/libs/flot/jquery.flot.stack.js"></script>
-    <script src="../../assets/libs/flot/jquery.flot.crosshair.js"></script>
-    <script src="../../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-    <script src="../../dist/js/pages/chart/chart-page-init.js"></script>
 </html>
-
